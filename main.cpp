@@ -5,7 +5,6 @@
 #include "Adafruit_GFX/LcdTools.h"
 #include "fuckinhot.hpp"
 #include <string>
-#include <iomanip>
 using namespace std;
 
 const char LCD_I2C_ADDR = 0x3C;
@@ -19,10 +18,12 @@ int main() {
     hdc.init();
     while (true) {
         hdc.update();
+#ifdef DEBUG
         pc.printf(
                 string(
                         "T:" + to_string(hdc.Temperature) + " H:"
                                 + to_string(hdc.Humidity) + "\r\n").c_str());
+#endif
         oled.clearDisplay();
         LcdTools::print_bitmap(fuckinhot_face, &oled, 128, 64, 0, 0);
         if (hdc.Temperature < 20) {
