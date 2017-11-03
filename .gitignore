@@ -1,5 +1,6 @@
 /.temp/
 /makefile.targets
 /makefile.defs
+/NUCLEO-F303K8.xml
 /mbed/
 *.cfg
