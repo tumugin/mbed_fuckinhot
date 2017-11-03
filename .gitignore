@@ -1,3 +1,5 @@
 /.temp/
 /makefile.targets
+/makefile.defs
 /mbed/
+*.cfg
