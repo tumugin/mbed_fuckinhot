@@ -5,5 +5,5 @@ class LcdTools {
 public:
     LcdTools();
     virtual ~LcdTools();
-    static void print_bitmap(const char* bitmap,Adafruit_SSD1306_I2c oled);
+    static void print_bitmap(const char* bitmap,Adafruit_SSD1306_I2c* oled);
 };
